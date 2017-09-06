@@ -11,8 +11,9 @@ if ((lowercase === "classroom") || (lowercase === "students")) {
   window.alert(stem2[lowercase]);
 }
 else {
+window.alert("You tried "+ 1 +" time");
 //if user fails play fucntion to try again
-for(i=1;i<3;i++){
+for(i=2;i<4;i++){
 //for loop to play the loop a certain amount of times
 var x = prompt("Classroom or Students?");
 var lowercase = x.toLowerCase();
@@ -24,7 +25,7 @@ i = 3;
 //without setting the i to 3 then it will run infinite because u didnt end it
 }
 else {
-	window.alert("You tried "+i+" times")
+	window.alert("You tried "+ i +" times");
   //displays the amount of tried you were given
 }
 }
