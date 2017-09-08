@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><style>#one{
+  font-size:100px;
+}
+#font{
+  font-size:100px;
+}</style></head>
+<body>
+<script>
+function showName(){
+	var x = document.getElementById('userInfo').value;
+  document.getElementById('one').innerHTML = 'hello '+x;
+}
+</script>
+<input type="text" id="userInfo">
+<button onClick="showName()" id="font">
+ClickLMAO
+</button>
+<p1 id="one"></p1>
+</body>
+</html>
