@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+<script>
+function removeOne(){
+  var hey = document.getElementById('y').value;
+  var stupidKid = document.getElementsByTagName('li')[hey];
+  var hana = stupidKid.parentNode;
+  hana.removeChild(stupidKid);
+}
+</script>
+<input type = "text" id = "y">
+<button onClick="removeOne()" >click me</button>
+<ul>
+  <ol>hey</ol>
+  <ol>there</ol>
+  <ol>their</ol>
+</ul>
+</body>
+</html>
