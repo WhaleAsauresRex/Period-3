@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <button onClick="addAnother()">
+  ADD PEEPs</button>
+  <ul>
+    <li>Chicken</li>
+    <li>Duck</li>
+    <li>Goose</li>
+  </ul>
+  <script>
+    function addAnother(){
+      var tony = document.createElement('li');
+      var samiyah = document.createTextNode('mrSkam');
+      tony.appendChild(samiyah);
+      var brandon = document.getElementsByTagName('ul')[0];
+      brandon.appendChild(tony)
+    }
+  </script>
+</body>
+</html>
