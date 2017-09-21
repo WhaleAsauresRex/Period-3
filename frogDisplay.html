@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  <img src="http://news.nationalgeographic.com/content/dam/news/2017/04/27/frog-gallery/01-frog-day-gallery.jpg" id="frog" width=50% height=50%
+  onmouseover="froggyOn()" onmouseout="frogoIn()">
+  <h2 id ="way">Free Frogo</h2>
+  <script>
+  function froggyOn() {
+    document.getElementById('way').style.visibility = "hidden";
+    document.getElementById('frog').style.transform = "rotate(45deg)";
+  }
+  function frogoIn() {
+    document.getElementById('way').style.visibility = "visible";
+      document.getElementById('frog').style.transform = "rotate(0deg)";
+  }
+  </script>
+  </body>
+</html>
