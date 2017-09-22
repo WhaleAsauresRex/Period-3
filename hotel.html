@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MrSkam's Palace</title>
+    <style>
+      body {
+        background-image:url("https://i.ytimg.com/vi/5QB3GGiLdLA/maxresdefault.jpg");
+        background-size:cover;
+      }
+      #roomOne {
+        background-color:rgba(0, 138, 174, 0.7);
+        color:purple;
+        width:400px;
+        height:200px;
+        left:300px;
+        position:absolute;
+
+      }
+      #roomTwo{
+        background-color:rgba(0, 138, 174, 0.7);
+        color:purple;
+        width:400px;
+        height:200px;
+        right:300px;
+        position:absolute;
+      }
+      #roomThree{
+        position:absolute;
+        background-color:rgba(0, 138, 174, 0.7);
+        color:purple;
+        width:400px;
+        height:200px;
+        left:300px;
+        bottom:100px;
+      }
+      #roomFour{
+        position:absolute;
+        background-color:rgba(0, 138, 174, 0.7);
+        color:purple;
+        width:400px;
+        height:200px;
+        float:right;
+        right:300px;
+        bottom:100px;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>MrSkam's Palace</h1></center>
+    <div id="roomOne">
+      <center>Room 1</center>
+      <input type="text" id="rOne">
+      <button onClick="roomA()">Click</button>
+      <h1 id="z"></h1>
+    </div>
+    
+    <div id="roomTwo">
+      <center>Room 2</center>
+    </div>
+    
+    <div id="roomThree">
+      <center>Room 3</center>
+    </div>
+    
+    <div id="roomFour">
+      <center>Room 4</center>
+    </div>
+    
+    <script>
+     function roomA(){
+       var x = document.getElementById("roomOne").innerHTML;document.getElementById("rOne").value;
+       document.getElementById("z").innerHTML=x;
+     }
+    </script>
+  </body>
+</html>
