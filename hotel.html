@@ -7,16 +7,20 @@
         background-image:url("https://i.ytimg.com/vi/5QB3GGiLdLA/maxresdefault.jpg");
         background-size:cover;
       }
-      #roomOne {
+      /*background image*/
+      .titleColor {
+        color:purple;
+      }
+      /*text that are titles*/
+      #floorOne {
         background-color:rgba(0, 138, 174, 0.7);
         color:purple;
         width:400px;
         height:200px;
         left:300px;
         position:absolute;
-
       }
-      #roomTwo{
+      #floorTwo{
         background-color:rgba(0, 138, 174, 0.7);
         color:purple;
         width:400px;
@@ -24,7 +28,7 @@
         right:300px;
         position:absolute;
       }
-      #roomThree{
+      #floorThree{
         position:absolute;
         background-color:rgba(0, 138, 174, 0.7);
         color:purple;
@@ -33,7 +37,7 @@
         left:300px;
         bottom:100px;
       }
-      #roomFour{
+      #floorFour{
         position:absolute;
         background-color:rgba(0, 138, 174, 0.7);
         color:purple;
@@ -45,31 +49,151 @@
       }
     </style>
   </head>
+  
+  
+  
   <body>
-    <center><h1>MrSkam's Palace</h1></center>
-    <div id="roomOne">
-      <center>Room 1</center>
-      <input type="text" id="rOne">
-      <button onClick="roomA()">Click</button>
-      <h1 id="z"></h1>
+    <center><h1 class="titleColor">MrSkam's Palace</h1></center>
+    <!-- title of the page -->
+    <div id="floorOne">
+      <center>Floor 1</center>
+      <input type="text" id="fOne">
+      <button onClick="floorA()" id="invOne">Click</button>
+      <ol>
+      </ol>
+      <p id="dis"></p>
     </div>
+    <!-- floor one -->
+    <div id="floorTwo">
+      <center>Floor 2</center>
+      <input type="text" id="fTwo">
+      <button onClick="floorB()" id="invTwo">Click</button>
+      <ol>
+      </ol>
+      <p id="dis2"></p>
+    </div>
+    <!-- floor two-->
+    <div id="floorThree">
+      <center>Floor 3</center>
+      <input type="text" id="fThree">
+      <button onClick="floorC()" id="invThree">Click</button>
+      <ol>
+      </ol>
+      <p id="dis3"></p>
+    </div>
+    <!--floor three-->
+    <div id="floorFour">
+      <center>Floor 4</center>
+      <input type="text" id="fFour">
+      <button onClick="floorD()" id="invFour">Click</button>
+      <ol>
+      </ol>
+      <p id="dis4"></p>
+    </div>
+    <!--floor four-->
     
-    <div id="roomTwo">
-      <center>Room 2</center>
-    </div>
     
-    <div id="roomThree">
-      <center>Room 3</center>
-    </div>
-    
-    <div id="roomFour">
-      <center>Room 4</center>
-    </div>
     
     <script>
-     function roomA(){
-       var x = document.getElementById("roomOne").innerHTML;document.getElementById("rOne").value;
-       document.getElementById("z").innerHTML=x;
+    var heyOne=[];
+    var heyTwo=[];
+        //document to see if the code works properly
+     function floorA(){
+       var x =document.getElementById("fOne").value;
+       //takes users input
+       var newCustomer = document.createElement('li');
+       var customerName = document.createTextNode(x);
+       newCustomer.appendChild(customerName);
+       var room = document.getElementsByTagName('ol')[0];
+       room.appendChild(newCustomer);
+       //creates a list with the user input
+         var y =heyOne.push(x);
+        //pushes the user input into an array
+        var zx = document.getElementById('dis').innerHTML=heyOne;
+        //display if it works
+       if(y<5){
+         window.alert("Thanks for choosing Skam's Palace");
+       }
+       //if there aren't 5 peeps there is still room
+       else {
+         var closeInput= document.getElementById('fOne').style.display=('none');
+         var closeButton= document.getElementById('invOne').style.display=('none');
+         window.alert("TOO MANY");
+       }
+       //else there isn't anymore room
+     }
+     //floor one with the code to display names and max people in a floor
+     function floorB(){
+       var x =document.getElementById("fTwo").value;
+              //takes users input
+       var newCustomer = document.createElement('li');
+       var customerName = document.createTextNode(x);
+       newCustomer.appendChild(customerName);
+       var room = document.getElementsByTagName('ol')[1];
+       room.appendChild(newCustomer);
+       //creates a list with the user input
+         var y =heyTwo.push(x);
+         //pushes the user input into an array
+        var zx = document.getElementById('dis2').innerHTML=heyTwo;
+         //display if it works
+       if(y<5){
+         window.alert("Thanks for choosing Skam's Palace");
+       }
+          //if there aren't 5 peeps there is still room
+       else {
+         var closeInput= document.getElementById('fTwo').style.display=('none');
+         var closeButton= document.getElementById('invTwo').style.display=('none');
+         window.alert("TOO MANY");
+       }
+       //else there isn't anymore room
+     }
+     function floorC(){
+       var x =document.getElementById("fThree").value;
+              //takes users input
+       var newCustomer = document.createElement('li');
+       var customerName = document.createTextNode(x);
+       newCustomer.appendChild(customerName);
+       var room = document.getElementsByTagName('ol')[2];
+       room.appendChild(newCustomer);
+       //creates a list with the user input
+         var y =heyTwo.push(x);
+         //pushes the user input into an array
+        var zx = document.getElementById('dis3').innerHTML=heyTwo;
+         //display if it works
+       if(y<5){
+         window.alert("Thanks for choosing Skam's Palace");
+       }
+          //if there aren't 5 peeps there is still room
+       else {
+         var closeInput= document.getElementById('fThree').style.display=('none');
+         var closeButton= document.getElementById('invThree').style.display=('none');
+         window.alert("TOO MANY");
+       }
+       //else there isn't anymore room
+     }
+     function floorD(){
+       var x =document.getElementById("fFour").value;
+              //takes users input
+       var newCustomer = document.createElement('li');
+       var customerName = document.createTextNode(x);
+       newCustomer.appendChild(customerName);
+       var room = document.getElementsByTagName('ol')[3];
+       room.appendChild(newCustomer);
+       //creates a list with the user input
+         var y =heyTwo.push(x);
+         //pushes the user input into an array
+        var zx = document.getElementById('dis4').innerHTML=heyTwo;
+         //display if it works
+       if(y<5){
+         window.alert("Thanks for choosing Skam's Palace");
+       }
+          //if there aren't 5 peeps there is still room
+       else {
+         var closeInput= document.getElementById('fFour').style.display=('none');
+         var closeButton= document.getElementById('invFour').style.display=('none');
+         window.alert("TOO MANY");
+       }
+       //else there isn't anymore room
      }
     </script>
   </body>
