@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var vh = window.innerHeight;
+      var vw = window.innerWidth;
+      var value = 'black';
+      
+      function setup() {
+        createCanvas(vw,vh);
+        stroke(0,100);
+        background('white');
+      }
+      
+      function keyTyped() {
+        if (key === 'x') {
+          value = 'white';
+        }
+        else if (key === 'z') {
+          value = 'black';
+        }
+        else if (key === 'c') {
+          var r = random(256);
+          var g = random(256);
+          var b = random(256);
+          var rgb= color(r,g,b);
+          value = rgb;
+          
+        }
+        }
+      
+      
+      function draw() {
+        if (mouseIsPressed) {
+        var weight = dist(mouseX, mouseY, pmouseX, pmouseY);
+        strokeWeight(weight);
+        stroke(color(value));
+        line(mouseX, mouseY, pmouseX, pmouseY);
+        }
+        else {
+          noFill();
+        }
+      }
+    </script>
+    <p>s</p>
+  </body>
+</html>
