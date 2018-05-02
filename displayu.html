@@ -4,7 +4,7 @@
       function displayit(event) {
         var hello = document.getElementById('Name').value;
           if(window.event.keyCode==13){
-            window.alert(hello);
+            var showthename = document.getElementById('theName').innerHTML = hello;
           }
       }
     </script>
@@ -12,6 +12,7 @@
   <body>
     <h1>What is your name?</h1>
     <input type = "text" id = "Name" onkeypress = "displayit(event)">
+    <h1 id = "theName"></h1>
 
     
   </body>
